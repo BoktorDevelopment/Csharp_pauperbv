@@ -3,6 +3,10 @@
     font-family: 'Cabin', sans-serif;
 }
 
+html,body { 
+    height:100%;
+}
+
 a{
     text-decoration: none;
     color : inherit;
@@ -40,21 +44,24 @@ nav {
 }
 
 #contentContainer{
-    border: 1px solid #111;
     width: 100%;
     float: left;
+    position: absolute;
+    top: 140px;
+    bottom: 0px;
 }
 
 #musicList{
-    float: left;
-    border-right : 1px solid #111;
+    float: left;]
     width : 350px;
+    height: 100%;
 }
 
 .musicListItems{
     padding: 10px;
     margin: 0;
-    width: 100% - 10px;
+    width: 330px;
+    display: flex;
     transition: 0.7s;
 }
 
@@ -64,4 +71,5 @@ nav {
 
 #content{
     float: left;
+    height: 100% - 351px;
 }
