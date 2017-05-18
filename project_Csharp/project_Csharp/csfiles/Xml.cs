@@ -9,14 +9,12 @@ namespace project_Csharp.csfiles
 {
     public class Xml
     {
-        public void readXML() {
-            XmlTextReader playlist = new XmlTextReader("data/playlist.xml");
-            while (playlist.Read())
-            {
-                // Gegevens hier verwerken.
-                Console.WriteLine(playlist.Name);
-            }
-            Console.ReadLine();
+        public int readXML()
+        {
+            int var = 10;
+
+            return var;
         }
+          
     }
 }
