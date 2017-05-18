@@ -56,6 +56,7 @@
 
         <div id="contentContainer" min>
             <div id="musicList">
+                <div id="musicListHeader">Muziek</div>
                 @foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     <a href=""><div class="musicListItems">@dr["artist"]  -  @dr["title"]</div></a>
