@@ -2,31 +2,10 @@
 @using project_Csharp.csfiles;
 @{ 
 
-    var xml = new Xml();
+    Xml xml = new Xml();
 
-    DataSet ds = new DataSet("playlist");
-    DataTable dtSongs = new DataTable("song");
 
-    DataColumn dtID = new DataColumn("id");
-    DataColumn dtArtist = new DataColumn("artist");
-    DataColumn dtTitle = new DataColumn("title");
-    DataColumn dtYear = new DataColumn("year");
-    DataColumn dtGenre = new DataColumn("genre");
-    DataColumn dtTime = new DataColumn("time");
-    DataColumn dtFile = new DataColumn("file");
-
-    ds.Tables.Add(dtSongs);
-    dtSongs.Columns.Add(dtID);
-    dtSongs.Columns.Add(dtArtist);
-    dtSongs.Columns.Add(dtTitle);
-    dtSongs.Columns.Add(dtYear);
-    dtSongs.Columns.Add(dtGenre);
-    dtSongs.Columns.Add(dtTime);
-    dtSongs.Columns.Add(dtFile);
-
-    ds.ReadXml(Server.MapPath("data/playlist.xml"));
-
-    int speed = xml.readXML();
+    xml.getSongs();
 
     }
 
@@ -50,14 +29,14 @@
 
         <nav>
             <div id="navItems">
-                <a href=""> XML </a>| <a href=""> JSON </a> | <a href=""> Pauper 1 </a> | <a href=""> Pauper 2 </a> | <a href=""> Pauper 3 </a>
+                <a href=""> XML </a>| <a href=""> JSON </a> | <a href="~/addSong.cshtml"> Pauper 1 </a> | <a href=""> Pauper 2 </a> | <a href=""> Pauper 3 </a>
             </div>
         </nav>
 
         <div id="contentContainer" min>
             <div id="musicList">
                 <div id="musicListHeader">Muziek</div>
-                @foreach (DataRow dr in ds.Tables[0].Rows)
+                @foreach (DataRow dr in xml.ds.Tables[0].Rows)
                 {
                     <a href=""><div class="musicListItems">@dr["artist"]  -  @dr["title"]</div></a>
                 }

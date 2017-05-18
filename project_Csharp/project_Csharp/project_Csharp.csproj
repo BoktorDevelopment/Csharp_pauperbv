@@ -123,12 +123,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\index.css" />
-    <Content Include="data\playlist.xml" />
+    <Content Include="data\playlist.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="home.cshtml" />
+    <Content Include="addSong.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
