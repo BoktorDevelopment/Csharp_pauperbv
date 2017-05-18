@@ -54,19 +54,15 @@
 
         <div id="contentContainer">
             <div id="musicList">
-                <a href=""><div class="musicListItems">Despacito - Luis Fonsi ft. Daddy Yankee</div></a>
-                <a href=""><div class="musicListItems">Shape of you - Ed Sheeran</div></a>
-                <a href=""><div class="musicListItems">It ain't me - Kygo & Selena Gomez</div></a>
-                <a href=""><div class="musicListItems">Symphony - Clean Bandit feat. Zara Larsson</div></a>
-                <a href=""><div class="musicListItems">Alleen - Lil Kleine</div></a>
+                @foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    <a href=""><div class="musicListItems">@dr["artist"]  -  @dr["title"]</div></a>
+                }
             </div>
             
 
             <div id="content">
-                @foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    <div class="musicListItems">@dr["artist"] - @dr["title"]</div>
-                }
+                
             </div>
         </div>
 
