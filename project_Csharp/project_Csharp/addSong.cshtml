@@ -1,8 +1,11 @@
-﻿@using System.Data;
+﻿
+@using project_Csharp.csfiles;
 @{
-    //Layout = "~/home.cshtml";
+    Xml xml = new Xml();
 
-    DataSet ds = Session["dataset"] as DataSet;
+    xml.addsong();
+
+
 }
 
 <html>
@@ -10,7 +13,7 @@
         <title></title>
     </head>
     <body>
-        <form action="~/home.cshtml" method="post">
+        <form action="" method="post">
             <input type="textbox" name="artist" value="" />
             <input type="textbox" name="title" value="" />
             <input type="textbox" name="year" value="" />

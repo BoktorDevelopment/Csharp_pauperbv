@@ -38,7 +38,7 @@
                 <div id="musicListHeader">Muziek</div>
                 @foreach (DataRow dr in xml.ds.Tables[0].Rows)
                 {
-                    <a href=""><div class="musicListItems">@dr["artist"]  -  @dr["title"]</div></a>
+                    <a href=""><div class="musicListItems">@dr["id"].  @dr["artist"]  -  @dr["title"]</div></a>
                 }
             </div>
             
