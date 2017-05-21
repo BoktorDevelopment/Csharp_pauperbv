@@ -9,6 +9,7 @@ namespace project_Csharp.csfiles
 {
     public class Xml
     {
+       
        public DataSet ds = new DataSet("playlist");
 
         DataTable dtSongs = new DataTable("song");
@@ -20,12 +21,7 @@ namespace project_Csharp.csfiles
         DataColumn dtTime = new DataColumn("time");
         DataColumn dtFile = new DataColumn("file");
 
-        public void getSongs() {
-            
-            
-
-          
-
+        public Xml() {
             ds.Tables.Add(dtSongs);
             dtSongs.Columns.Add(dtID);
             dtSongs.Columns.Add(dtArtist);
@@ -35,14 +31,16 @@ namespace project_Csharp.csfiles
             dtSongs.Columns.Add(dtTime);
             dtSongs.Columns.Add(dtFile);
 
+        }
+
+        public void getSongs() {
+
             ds.ReadXml(System.Web.HttpContext.Current.Server.MapPath("data/playlist.xml"));
         }
 
 
         public void addsong()
         {
-            if (HttpContext.Current.Request.HttpMethod == "POST") 
-            {
                 string artist = HttpContext.Current.Request.Form["artist"];
                 string title = HttpContext.Current.Request.Form["title"];
                 string year = HttpContext.Current.Request.Form["year"];
@@ -62,7 +60,6 @@ namespace project_Csharp.csfiles
                 ds.Tables[0].Rows.Add(dr);
 
                 ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("data/playlist.xml"));
-            }
 
 
         }
