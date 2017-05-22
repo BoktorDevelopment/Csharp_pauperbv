@@ -31,6 +31,7 @@ namespace project_Csharp.csfiles
             dtSongs.Columns.Add(dtTime);
             dtSongs.Columns.Add(dtFile);
 
+            getSongs();
         }
 
         public void getSongs() {

@@ -1,10 +1,11 @@
 ﻿
 @using project_Csharp.csfiles;
 @{
-    Xml xml = new Xml();
+    if (IsPost) {
+        Xml xml = new Xml();
 
-    xml.addsong();
-
+        xml.addsong();
+    }
 
 }
 
