@@ -132,6 +132,7 @@
     </Content>
     <Content Include="home.cshtml" />
     <Content Include="addSong.cshtml" />
+    <Content Include="delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -145,6 +146,9 @@
   <ItemGroup>
     <Compile Include="csfiles\Xml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
