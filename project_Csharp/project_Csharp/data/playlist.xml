@@ -1,39 +1,21 @@
 <?xml version="1.0" standalone="yes"?>
 <playlist>
   <song>
-    <id>1</id>!points 
-    <artist>kdfksdafas</artist>
-    <title>klasjflsadkfj</title>
-    <year>dkslfjasldkflasjkfj</year>
-    <genre>dklfjsdakfj</genre>
-    <time>flksdjlkfsdjaf</time>
-    <file>fldkfaasdfsa</file>
-  </song>
-  <song>
-    <id>2</id>
-    <artist>2</artist>
-    <title>2</title>
-    <year>2</year>
-    <genre>2</genre>
-    <time>2</time>
-    <file>2</file>
-  </song>
-  <song>
-    <id>3</id>
-    <artist>kri</artist>
-    <title>krtif</title>
-    <year>kj</year>
-    <genre>khkj</genre>
-    <time>khjh</time>
-    <file>kasdfa</file>
+    <id>1</id>
+    <artist>asdf</artist>
+    <title>asdf</title>
+    <year>sadf</year>
+    <genre>sadf</genre>
+    <time>asdf</time>
+    <file>sadf</file>
   </song>
   <song>
     <id>4</id>
-    <artist>12</artist>
-    <title>12</title>
-    <year>12</year>
-    <genre>12</genre>
-    <time>12</time>
-    <file>12</file>
+    <artist>asdf</artist>
+    <title>asdf</title>
+    <year>asdf</year>
+    <genre>asdf</genre>
+    <time>asdf</time>
+    <file>asdf</file>
   </song>
 </playlist>

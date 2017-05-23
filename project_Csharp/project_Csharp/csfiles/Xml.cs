@@ -46,7 +46,13 @@ namespace project_Csharp.csfiles
                 stringID = dr["id"].ToString();
                 
                 }
-            id = int.Parse(stringID);
+            try
+            {
+                id = int.Parse(stringID);
+            }
+            catch {
+                id = 0;
+            }
 
         }
 
@@ -78,6 +84,23 @@ namespace project_Csharp.csfiles
             ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("data/playlist.xml"));
 
 
+        }
+        public void deleteSong()
+        {
+            string id = HttpContext.Current.Request.QueryString["id"];
+
+            DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
+            dRows[0].Delete();
+
+            ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("data/playlist.xml"));
+        }
+
+        public void renameId()
+        {
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                //functie om nieuwe ID's te geven zodat de telling klopt
+            }
         }
           
     }

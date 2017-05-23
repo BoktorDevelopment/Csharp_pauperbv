@@ -66,6 +66,12 @@ nav {
     color : #fff;
 }
 
+#plusButton{
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
 .musicListItems{
     padding: 10px;
     margin: 0;
@@ -78,6 +84,32 @@ nav {
 .musicListItems:hover{
     background-color :  #EFEFEF;
 }
+
+.musicListItems:hover .crudButtons{
+    
+    transition: 0.7s;
+    width : 20px;
+    height : 20px;
+    display: block;
+}
+
+.musicListItems .crudButtons{
+    height: 0;
+    width: 0;
+    display: none;
+    float: left;
+   position: absolute;
+   left: 250px;
+}
+
+#deleteButton{
+    left: 320px;
+}
+
+#editButton{
+    left: 295px;
+}
+
 
 #content{
     position: absolute;

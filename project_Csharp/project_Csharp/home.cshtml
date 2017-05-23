@@ -5,7 +5,7 @@
     Xml xml = new Xml();
 
 
-    xml.getSongs();
+   
 
     }
 
@@ -35,10 +35,10 @@
 
         <div id="contentContainer" min>
             <div id="musicList">
-                <div id="musicListHeader">Muziek</div>
+                <div id="musicListHeader">Muziek<a href="~/addSong.cshtml"><img src="~/img/plusButton.png" id="plusButton" /></a></div>
                 @foreach (DataRow dr in xml.ds.Tables[0].Rows)
                 {
-                    <a href="Delete?id=@dr["id"]"><div class="musicListItems">@dr["id"].  @dr["artist"]  -  @dr["title"]</div></a>
+                    <div class="musicListItems"><a>@dr["id"].  @dr["artist"]  -  @dr["title"]</a><a href="#"><img src="~/img/editButton.png" class="crudButtons" id="editButton"/></a><a href="delete.cshtml?id=@dr["id"]"><img src="~/img/deleteButton.png" class="crudButtons" id="deleteButton" /></a></div>
                 }
             </div>
             
