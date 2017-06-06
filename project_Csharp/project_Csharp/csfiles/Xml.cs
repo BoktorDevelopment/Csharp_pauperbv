@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Xml;
+using System.Web.WebPages;
 
 namespace project_Csharp.csfiles
 {
@@ -94,6 +95,16 @@ namespace project_Csharp.csfiles
 
             ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("data/playlist.xml"));
         }
+
+        public void editSong()
+        {
+            string id = HttpContext.Current.Request.QueryString["id"];
+            DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
+
+            string artist = HttpContext.Current.Request.Form["artist"];
+            
+
+        } 
 
         public void renameId()
         {
