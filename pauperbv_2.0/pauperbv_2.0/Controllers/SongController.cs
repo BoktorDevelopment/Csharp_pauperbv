@@ -14,11 +14,11 @@ namespace pauperbv_2._0.Controllers
             return View();
         }
 
-        public void viewSong() {
+        public ActionResult show() {
             string result = "";
 
 
-            return result;
+            return View();
         }
 
 
