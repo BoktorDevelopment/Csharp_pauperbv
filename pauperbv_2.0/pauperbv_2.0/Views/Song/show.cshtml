@@ -1,7 +1,21 @@
-﻿
+﻿@using System.Web;
+@using System.Data;
+
 @{
     ViewBag.Title = "show";
 }
-
+<style>
+    .musicListItems img 
+    {
+        height: 25px;
+        width: 25px;
+    }
+</style>
 <h2>show</h2>
+
+@foreach (DataRow dr in ViewBag.data)
+{
+    <div class="musicListItems">@dr["id"].  @dr["artist"]  -  @dr["title"]<a href="#"><img src="../../img/editButton.png" class="crudButtons" id="editButton" /></a>
+    <a href="delete.cshtml?id=@dr["id"]"><img src="../../img/deleteButton.png" class="crudButtons" id="deleteButton" /></a></div>
+}
 

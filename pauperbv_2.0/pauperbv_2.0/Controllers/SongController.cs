@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using pauperbv_2._0.Models;
 
 namespace pauperbv_2._0.Controllers
 {
@@ -15,8 +16,9 @@ namespace pauperbv_2._0.Controllers
         }
 
         public ActionResult show() {
-            string result = "";
+            song song = new song();
 
+            ViewBag.data = song.ds.Tables[0].Rows;
 
             return View();
         }
