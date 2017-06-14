@@ -5,17 +5,48 @@
     ViewBag.Title = "show";
 }
 <style>
-    .musicListItems img 
-    {
-        height: 25px;
-        width: 25px;
+    tr {
+        border-bottom: 1px solid black;
+    }
+    .title-td {
+        font-weight: bold;
+    }
+    td {
+        width: 150px;
+        overflow: hidden;
     }
 </style>
 <h2>show</h2>
 
-@foreach (DataRow dr in ViewBag.data)
-{
-    <div class="musicListItems">@dr["id"].  @dr["artist"]  -  @dr["title"]<a href="#"><img src="../../img/editButton.png" class="crudButtons" id="editButton" /></a>
-    <a href="delete?id=@dr["id"]"><img src="../../img/deleteButton.png" class="crudButtons" id="deleteButton" /></a></div>
-}
+<table class="">
+        <tr class="title-td">
+            <td>id</td>
+            <td>artist</td>
+            <td>title</td>
+            <td>year</td>
+            <td>genre</td>
+            <td>time</td>
+            <td>file</td>
+            <td></td>
+
+        </tr>
+    @foreach (DataRow dr in ViewBag.data)
+    {
+        <tr>
+            <td><b>@dr["id"].</b></td> 
+            <td>@dr["artist"]</td>   
+            <td>@dr["title"]</td>
+            <td>@dr["year"]</td>
+            <td>@dr["genre"]</td>
+            <td>@dr["time"]</td>
+            <td>@dr["file"]</td>
+            <td>
+                <a href="#"><img src="../../img/editButton.png" class="crudButtons" id="editButton" style="  height: 25px;
+        width: 25px;" /></a>
+                <a href="delete?id=@dr["id"]"><img src="../../img/deleteButton.png" class="crudButtons" id="deleteButton" style="  height: 25px;
+        width: 25px;" /></a>
+            </td>
+        </tr>
+    }
+</table>
 
