@@ -84,7 +84,7 @@ namespace pauperbv_2._0.Models
 
                 ds.Tables[0].Rows.Add(dr);
 
-                ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("data/playlist.xml"));
+                ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("../data/songs.xml"));
 
 
             }
@@ -95,7 +95,7 @@ namespace pauperbv_2._0.Models
                 DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
                 dRows[0].Delete();
 
-                ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("data/playlist.xml"));
+                ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("../data/songs.xml"));
             }
 
             public void editSong()

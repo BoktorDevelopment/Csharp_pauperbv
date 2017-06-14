@@ -1,0 +1,12 @@
+﻿@using pauperbv_2._0.Models;
+@{
+    ViewBag.Title = "delete";
+
+    song song = new song();
+
+    song.deleteSong();
+    Response.Redirect("show");
+}
+
+<h2>delete</h2>
+

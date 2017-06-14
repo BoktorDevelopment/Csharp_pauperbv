@@ -16,6 +16,6 @@
 @foreach (DataRow dr in ViewBag.data)
 {
     <div class="musicListItems">@dr["id"].  @dr["artist"]  -  @dr["title"]<a href="#"><img src="../../img/editButton.png" class="crudButtons" id="editButton" /></a>
-    <a href="delete.cshtml?id=@dr["id"]"><img src="../../img/deleteButton.png" class="crudButtons" id="deleteButton" /></a></div>
+    <a href="delete?id=@dr["id"]"><img src="../../img/deleteButton.png" class="crudButtons" id="deleteButton" /></a></div>
 }
 

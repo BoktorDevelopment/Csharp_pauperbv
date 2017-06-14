@@ -200,6 +200,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Song\show.cshtml" />
+    <Content Include="Views\Song\delete.cshtml" />
+    <Content Include="Views\Song\edit.cshtml" />
+    <Content Include="Views\Song\add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
