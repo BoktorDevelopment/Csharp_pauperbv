@@ -1,16 +1,17 @@
 ﻿@using pauperbv_2._0.Models;
+@using System.Data;
 @{
     ViewBag.Title = "edit";
+    song song = new song();
 
- 
-
+    DataRow dRow = song.editSong();
 }
 
 <h2>edit</h2>
 
 <form action="" method="post">
-    <input type="textbox" name="artist" value="" />
-    <input type="textbox" name="title" value="" />
+    <input type="textbox" name="artist" value="{{dRow['artist']}}" />
+    <input type="textbox" name="title" value="@dRow["title"]" />
     <input type="textbox" name="year" value="" />
     <input type="textbox" name="genre" value="" />
     <input type="textbox" name="time" value="" />

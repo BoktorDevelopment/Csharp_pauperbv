@@ -92,6 +92,7 @@ namespace pauperbv_2._0.Models
             public void deleteSong()
             {
                 string id = HttpContext.Current.Request.QueryString["id"];
+                
 
                 DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
                 dRows[0].Delete();
@@ -99,23 +100,17 @@ namespace pauperbv_2._0.Models
                 ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("../data/songs.xml"));
             }
 
-            public void editSong()
+            public DataRow editSong()
             {
-                string id = HttpContext.Current.Request.QueryString["id"];
-                DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
-
-                string artist = HttpContext.Current.Request.Form["artist"];
+            string id = HttpContext.Current.Request.QueryString["id"];
 
 
-            }
+            DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
 
-            public void renameId()
-            {
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    //functie om nieuwe ID's te geven zodat de telling klopt
-                }
-            }
+            return dRows[0];
+        }
+
+            
 
         }
     }
