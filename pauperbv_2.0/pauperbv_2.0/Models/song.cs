@@ -100,6 +100,8 @@ namespace pauperbv_2._0.Models
                 ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("../data/songs.xml"));
             }
 
+
+
             public DataRow editSong()
             {
             string id = HttpContext.Current.Request.QueryString["id"];
@@ -108,6 +110,33 @@ namespace pauperbv_2._0.Models
             DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
 
             return dRows[0];
+        }
+
+        public void editSongSend()
+        {
+            string artist = HttpContext.Current.Request.Form["artist"];
+            string title = HttpContext.Current.Request.Form["title"];
+            string year = HttpContext.Current.Request.Form["year"];
+            string genre = HttpContext.Current.Request.Form["genre"];
+            string time = HttpContext.Current.Request.Form["time"];
+            string file = HttpContext.Current.Request.Form["file"];
+
+            string id = HttpContext.Current.Request.QueryString["id"];
+
+            DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
+            DataRow dr = dRows[0];
+            
+
+            dr["id"] = id;
+            dr["artist"] = artist;
+            dr["title"] = title;
+            dr["year"] = year;
+            dr["genre"] = genre;
+            dr["time"] = time;
+            dr["file"] = file;
+
+
+            ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("../data/songs.xml"));
         }
 
             

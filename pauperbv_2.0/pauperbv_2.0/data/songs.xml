@@ -1,12 +1,30 @@
 <?xml version="1.0" standalone="yes"?>
 <playlist>
   <song>
-    <id>1</id>
-    <artist>fdsfasfsfd</artist>
-    <title>fdsfsadfsa</title>
-    <year>gffjgfhg</year>
-    <genre>fgfhgfhg</genre>
-    <time>hghjgk</time>
-    <file>gfgfhg</file>
+    <id>2</id>
+    <artist>kris</artist>
+    <title>broekstra</title>
+    <year>krisie</year>
+    <genre>krisie</genre>
+    <time>krisie</time>
+    <file>justinbieber.nl</file>
+  </song>
+  <song>
+    <id>3</id>
+    <artist>hallo</artist>
+    <title>hallo</title>
+    <year>hallo</year>
+    <genre>hallo</genre>
+    <time>hallo</time>
+    <file>spotify</file>
+  </song>
+  <song>
+    <id>4</id>
+    <artist>kris</artist>
+    <title>krisi</title>
+    <year>kkkk</year>
+    <genre>k</genre>
+    <time>k</time>
+    <file>4iLqG9SeJSnt0cSPICSjxv</file>
   </song>
 </playlist>

@@ -5,16 +5,24 @@
     song song = new song();
 
     DataRow dRow = song.editSong();
+
+    if (IsPost)
+    {
+        song.editSongSend();
+        Response.Redirect("show");
+    }
+
 }
 
 <h2>edit</h2>
 
 <form action="" method="post">
-    <input type="textbox" name="artist" value="{{dRow['artist']}}" />
+    <input type="text" name="id" value="@dRow["id"]" />
+    <input type="textbox" name="artist" value="@dRow["artist"]" />
     <input type="textbox" name="title" value="@dRow["title"]" />
-    <input type="textbox" name="year" value="" />
-    <input type="textbox" name="genre" value="" />
-    <input type="textbox" name="time" value="" />
+    <input type="textbox" name="year" value="@dRow["year"]" />
+    <input type="textbox" name="genre" value="@dRow["genre"]" />
+    <input type="textbox" name="time" value="@dRow["time"]" />
     <input type="textbox" name="file" value="" />
 
     <input type="submit" name="edit" value="Add song" />

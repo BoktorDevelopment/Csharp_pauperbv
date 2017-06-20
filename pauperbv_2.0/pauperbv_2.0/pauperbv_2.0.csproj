@@ -161,7 +161,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="data\songs.xml" />
+    <Content Include="data\songs.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -205,7 +207,7 @@
     <Content Include="Views\Song\delete.cshtml" />
     <Content Include="Views\Song\edit.cshtml" />
     <Content Include="Views\Song\add.cshtml" />
-    <Content Include="Views\Movie\show.cshtml" />
+    <Content Include="Views\Home\Movie\show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
