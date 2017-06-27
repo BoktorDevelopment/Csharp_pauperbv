@@ -109,7 +109,7 @@ namespace pauperbv_2._0.Models
 
             DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
 
-            return dRows[0];
+             return dRows[0];
         }
 
         public void editSongSend()
@@ -137,6 +137,13 @@ namespace pauperbv_2._0.Models
 
 
             ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("../data/songs.xml"));
+        }
+
+        public string playSong()
+        {
+            string code = HttpContext.Current.Request.QueryString["code"];
+
+            return code;
         }
 
             

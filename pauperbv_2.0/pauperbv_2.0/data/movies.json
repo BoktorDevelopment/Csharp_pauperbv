@@ -1,9 +1,33 @@
 ﻿{
-    "movies":[
-        {"title":"I am legend", "year":"2011", "IMDB":12, "duration":"3 hours"},
-        {"title":"madagaskar", "year":"2009", "IMDB":3, "duration":"2 hours"},
-        {"title":"oorlogswinter", "year":"2008", "IMDB":12, "duration":"2,5 hours"},
-        {"title":"vee voor vendeta", "year":"2001", "IMDB":16, "duration":"2,5 hours"},
-        {"title":"taxi", "year":"2005", "IMDB":12, "duration":"1 hours"}
-    ]
+	"movies": [{
+			"title": "I am legend",
+			"year": "2011",
+			"IMDB": 12,
+			"duration": "3 hours"
+		},
+		{
+			"title": "madagaskar",
+			"year": "2009",
+			"IMDB": 3,
+			"duration": "2 hours"
+		},
+		{
+			"title": "oorlogswinter",
+			"year": "2008",
+			"IMDB": 12,
+			"duration": "2,5 hours"
+		},
+		{
+			"title": "vee voor vendeta",
+			"year": "2001",
+			"IMDB": 16,
+			"duration": "2,5 hours"
+		},
+		{
+			"title": "taxi",
+			"year": "2005",
+			"IMDB": 12,
+			"duration": "1 hours"
+		}
+	]
 }

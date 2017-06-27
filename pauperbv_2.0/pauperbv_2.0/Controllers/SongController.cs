@@ -37,6 +37,10 @@ namespace pauperbv_2._0.Controllers
         {
             return View();
         }
+        public ActionResult play()
+        {
+            return View();
+        }
 
 
 
