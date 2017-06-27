@@ -1,8 +1,12 @@
 ﻿@using System.Web;
 @using System.Data;
+@using pauperbv_2._0.Models;
 
 @{
     ViewBag.Title = "show";
+    song song = new song();
+
+  
 }
 <style>
     tr {
@@ -24,11 +28,15 @@
         height:25px;
         margin-left: 1028px;
         }
+    iframe 
+    {
+        display: block;  
+    }
 
 </style>
 <div id="header_div">
     <h2>show</h2>
-
+    <iframe width="300" height="25" src="@song.playSong()?autoplay=1&rel=o&autohide=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
 
     <a href="add">
         <img src="../../img/plusButton.png" class="" id="plusButton" style=" height 25px;
@@ -63,10 +71,12 @@
         width: 25px;" /></a>
                 <a href="delete?id=@dr["id"]"><img src="../../img/deleteButton.png" class="crudButtons" id="deleteButton" style="  height: 25px;
         width: 25px;" /></a>
-                <a href="play?code=@dr["file"]"><img src="../../img/playButton.png" style="  height: 25px;
+                <a href="show?code=@dr["file"]"><img src="../../img/playButton.png" style="  height: 25px;
         width: 25px;"/></a>
             </td>
         </tr>
     }
 </table>
+
+
 

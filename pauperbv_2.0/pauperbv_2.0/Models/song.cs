@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web;
 using System.Data;
 
 namespace pauperbv_2._0.Models
@@ -72,6 +71,8 @@ namespace pauperbv_2._0.Models
                 string time = HttpContext.Current.Request.Form["time"];
                 string file = HttpContext.Current.Request.Form["file"];
 
+            string code = file.Replace("watch?v=", "embed/");
+
                 DataRow dr = ds.Tables[0].NewRow();
 
                 dr["id"] = id;
@@ -80,7 +81,7 @@ namespace pauperbv_2._0.Models
                 dr["year"] = year;
                 dr["genre"] = genre;
                 dr["time"] = time;
-                dr["file"] = file;
+                dr["file"] = code;
 
                 ds.Tables[0].Rows.Add(dr);
 
