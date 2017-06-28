@@ -209,7 +209,6 @@
     <Content Include="Views\Song\edit.cshtml" />
     <Content Include="Views\Song\add.cshtml" />
     <Content Include="Views\Movie\show.cshtml" />
-    <Content Include="Views\Song\play.cshtml" />
     <Content Include="Views\Movie\add.cshtml" />
     <Content Include="Views\Movie\delete.cshtml" />
     <Content Include="Views\Movie\edit.cshtml" />

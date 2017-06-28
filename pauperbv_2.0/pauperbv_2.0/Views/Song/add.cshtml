@@ -8,7 +8,7 @@
     {
         song song = new song();
         song.addsong();
-        Response.Redirect("show");
+        Response.Redirect("show?code=");
     }
 
 
@@ -29,7 +29,7 @@
         <input type="textbox" name="year" value="" placeholder="year" />
         <input type="textbox" name="genre" value="" placeholder="genre" />
         <input type="textbox" name="time" value="" placeholder="time" />
-        <input type="textbox" name="file" value="" placeholder="youtube embed" />
+        <input type="textbox" name="file" value="" placeholder="youtube-link" />
 
         <input type="submit" name="edit" value="Add song" />
 

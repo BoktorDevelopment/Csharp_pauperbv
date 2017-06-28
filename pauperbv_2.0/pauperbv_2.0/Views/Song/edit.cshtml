@@ -9,21 +9,29 @@
     if (IsPost)
     {
         song.editSongSend();
-        Response.Redirect("show");
+        Response.Redirect("show?code=");
     }
 
 }
 
+<style>
+       input  
+    {
+        display: table;
+        margin: 5px;
+    }
+</style>
+
 <h2>edit</h2>
 
 <form action="" method="post">
-    <input type="text" name="id" value="@dRow["id"]" />
-    <input type="textbox" name="artist" value="@dRow["artist"]" />
-    <input type="textbox" name="title" value="@dRow["title"]" />
-    <input type="textbox" name="year" value="@dRow["year"]" />
-    <input type="textbox" name="genre" value="@dRow["genre"]" />
-    <input type="textbox" name="time" value="@dRow["time"]" />
-    <input type="textbox" name="file" value="@dRow["file"]" />
+    id: <input type="text" name="id" value="@dRow["id"]" readonly/>
+    artist: <input type="textbox" name="artist" value="@dRow["artist"]" />
+    title: <input type="textbox" name="title" value="@dRow["title"]" />
+    year: <input type="textbox" name="year" value="@dRow["year"]" />
+    genre: <input type="textbox" name="genre" value="@dRow["genre"]" />
+    time: <input type="textbox" name="time" value="@dRow["time"]" />
+    youtube-link: <input type="textbox" name="file" value="@dRow["file"]" />
 
     <input type="submit" name="edit" value="Add song" />
 

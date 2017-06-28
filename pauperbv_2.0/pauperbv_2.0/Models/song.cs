@@ -123,6 +123,7 @@ namespace pauperbv_2._0.Models
             string file = HttpContext.Current.Request.Form["file"];
 
             string id = HttpContext.Current.Request.QueryString["id"];
+            string code = file.Replace("watch?v=", "embed/");
 
             DataRow[] dRows = ds.Tables[0].Select("id='" + id + "'");
             DataRow dr = dRows[0];
@@ -134,7 +135,7 @@ namespace pauperbv_2._0.Models
             dr["year"] = year;
             dr["genre"] = genre;
             dr["time"] = time;
-            dr["file"] = file;
+            dr["file"] = code;
 
 
             ds.WriteXml(System.Web.HttpContext.Current.Server.MapPath("../data/songs.xml"));

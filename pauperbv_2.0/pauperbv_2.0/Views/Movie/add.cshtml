@@ -1,7 +1,24 @@
-﻿
+﻿@using pauperbv_2._0.Models;
 @{
     ViewBag.Title = "add";
+
+    Movies movies = new Movies();
+
+    if (IsPost)
+    {
+        movies.add();
+        Response.Redirect("show");
+    }
 }
 
 <h2>add</h2>
+<form action="" method="post">
+    <input type="textbox" name="title" value="" placeholder="title" />
+    <input type="textbox" name="year" value="" placeholder="year" />
+    <input type="textbox" name="duration" value="" placeholder="duration" />
+    <input type="textbox" name="IMDB" value="" placeholder="IMDB" />
+
+    <input type="submit" name="add" value="add movie" />
+
+</form>
 

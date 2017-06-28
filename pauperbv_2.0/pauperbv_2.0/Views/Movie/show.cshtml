@@ -4,10 +4,65 @@
 
     Movies movies = new Movies();
 
-    movies.show();
+    ;
 }
 
-<h2>Movies</h2>
+<style>
+    tr {
+            border-bottom: 1px solid black;
+        }
+    .title-td {
+            font-weight: bold;
+        }
+        td {
+            width: 150px;
+            overflow: hidden;
+        }
+        #header_div img {
+        margin-left: 1028px;
+        }
+    img 
+    {
+        width: 25px;
+        height: 25px;
+    }
+</style>
 
 
 
+<div id="header_div">
+    <h2>Movies</h2>
+    <a href="add">
+        <img src="../../img/plusButton.png" class="" id="plusButton" style=" height: 25px;
+             width: 25px;" />
+    </a>
+</div>
+
+    <table>
+        <tr class="title-td">
+            <td>id</td>
+            <td>title</td>
+            <td>year</td>
+            <td>duration</td>
+            <td>IMDB</td>
+            <td></td>
+        </tr>
+        @foreach (var item in movies.show())
+        {
+            <tr>
+                <td><b>@item.id</b></td>
+                <td>@item.title</td>
+                <td>@item.year</td>
+                <td>@item.duration</td>
+                <td>@item.IMDB</td>
+                <td>
+                    <a href="">
+                        <img src="../../img/editButton.png" class="crudButtons" id="editButton" style=" height 25px; width 25px;" />
+                    </a>
+                    <a href="delete?id=@item.id">
+                        <img src="../../img/deleteButton.png" class="crudButtons" id="deleteButton" style=" height 25px; width 25px;" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
